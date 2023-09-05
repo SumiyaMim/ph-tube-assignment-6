@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- css link -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- font link -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <link rel="shortcut icon" href="./image/logo1.png" type="image/x-icon">
+    <title>Blog</title>
+
+    <style>
+        .font-inter{
+            font-family: 'Inter', sans-serif;
+        }
+    </style>
+
+    <script>
+        tailwind.config = {
+        theme: {
+            extend: {
+            colors: {
+                'primary-color': '#FF1F3D',
+            }
+            }
+        }
+        }
+    </script>
+
+</head>
+<body class="">
+    <!-- nav section -->
+    <header class="container mx-auto px-10 py-6">
+        <nav class="flex flex-col md:flex-row gap-3 justify-between items-center">
+            <img src="./image/logo.png" alt="logo" class="w-36 h-8">
+            <button onclick="handleHomeButton()" class="bg-primary-color px-4 py-1 text-white rounded font-medium">Home</button>
+        </nav>
+    </header>
+    <hr class="mx-10 border border-[#171717] border-opacity-20">   
+
+    <!-- blog section -->
+    <main class="container mx-auto px-10 py-6">
+        <h1 class="text-2xl text-center my-8 font-bold">Blogs</h1>
+        <div class="bg-[#252525] bg-opacity-10 rounded-md py-10 px-10 my-5">
+            <h1 class="text-xl font-bold mb-4">Discuss the scope of var, let, and const</h1>
+            <p class="text-sm font-normal text-zinc-800 text-justify leading-6">
+            <span class="font-medium text-base">var:</span> Variables declared as var are in the global or function scope. Variables declared outside functions are called global scope, on the other hand, variables declared inside a function are called local variables and in the function scope. It can be redeclared and reassigned.
+                <br>
+            <span class="font-medium text-base">let:</span> Variables declared with let are in the block scope.  Variables declared in a block are called block scope. It can be reassigned to other values, but they cannot be redeclared.
+                <br>
+            <span class="font-medium text-base">const:</span> Variables declared as const are block scope. It is used for declaring constant variables that cannot be changed. They cannot be redeclared, and reassigned. 
+                <br><br>
+            In summary, the scope of var is function scoped, let and const are block-scoped. Developers do not recommend use var anymore. They use let or const instead of var. If we are not to change the value of a variable, it is best practice to use const.
+            </p>
+        </div>
+        <div class="bg-[#252525] bg-opacity-10 rounded-md py-10 px-10 lg:px-14 my-10">
+            <h1 class="text-xl font-bold mb-4">Tell us the use cases of null and undefined</h1>
+            <p class="text-sm font-normal text-zinc-800 text-justify leading-6"> 
+            Null is a primitive type in JavaScript. It is a special value that represents an empty or unknown value. It is assigned by the programmer that represent intentional absence of value when needed. It can be returned by functions to indicate no meaningful value.
+            <br><br>
+            Undefined is a primitive type in JavaScript. Undefined represents a variable that has not been assigned a value, or not declared at all. JavaScript normally assigns it automatically, when a value is missing or not initialized.
+            </p>
+        </div>
+        <div class="bg-[#252525] bg-opacity-10 rounded-md py-10 px-10 lg:px-14 my-10">
+            <h1 class="text-xl font-bold mb-4">What do you mean by REST API?</h1>
+            <p class="text-sm font-normal text-zinc-800 text-justify leading-6"> 
+            An Application Programming Interface (API) is a set of rules two software programs use to interact with each other and exchange data. REST stands for Representational State Transfer. A REST API is an API that uses HTTP requests to access and use data. It is also known as RESTful API. REST API are the most commonly used JSON and XML data formats for exchanging data.           
+            <br><br>
+
+            A REST API uses HTTP methods to perform CRUD (Create, Read, Update, Delete) operations on resources. For example: <br>
+            <span class="font-medium">GET:</span> Retrieve data about API resource. <br>
+            <span class="font-medium">POST:</span> Create an API resource.<br>
+            <span class="font-medium">PUT:</span> Update an API resource. <br>
+            <span class="font-medium">DELETE:</span> Remove an API resource. 
+            <br><br>
+
+            The key principles of a REST API: <br>
+            <ul class="list-disc text-sm text-zinc-800 ml-4">
+                <li>Uniform Interface</li>
+                <li>Stateless</li>
+                <li>Client-Server Architecture</li>
+                <li>Cacheable</li>
+                <li>Layered System</li>
+                <li>Code on Demand</li>
+            </ul>
+            </p>
+        </div>
+    </main>
+
+    <script src="./js/navigate.js"></script>
+</body>
+</html>
